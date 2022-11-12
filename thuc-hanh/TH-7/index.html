@@ -6,40 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-
-  <body onload="docReady()">
-    <!-- Chú ý có thuộc tính position để xác định vị trí nó sau khi di chuyển -->
+  <body>
     <img
       src="/thuc-hanh/TH-7/img/Bat-Cuoi-Truoc-Nhung-07.jpg"
-      alt="anh meo"
-      style="position: absolute; left: 0; top: 0; width: 200px"
-      id="catKey"
+      alt=""
+      style="
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 120px;
+        height: 100px;
+      "
+      id="picture"
     />
     <script>
-      function left() {
-          let img = document.getElementById("catKey");
-          img.style.left = parseInt(img.style.left) + 10 + "px";
+      function right() {
+        let picture = document.getElementById("picture");
+        picture.style.left = parseInt(picture.style.left) + 5 + "px";
       }
-       function () {
-            let img = document.getElementById("catKey");
-            img.style.left = parseInt(img.style.left) + 10 + "px";
+      function down() {
+        let picture = document.getElementById("picture");
+        picture.style.top = parseInt(picture.style.top) + 5 + "px";
+      }
+      function left() {
+        let picture = document.getElementById("picture");
+        picture.style.left = parseInt(picture.style.left) - 5 + "px";
+      }
+      function up() {
+        let picture = document.getElementById("picture");
+        picture.style.top = parseInt(picture.style.top) - 5 + "px";
+      }
+      document.addEventListener("keydown", function (event) {
+        if (event.key == "ArrowRight") {
+          right();
+        } else if (event.key == "ArrowUp") {
+          up();
+        } else if (event.key == "ArrowDown") {
+          down();
+        } else if (event.key == "ArrowLeft") {
+          left();
         }
-
-         function left() {
-                let img = document.getElementById("catKey");
-                img.style.left = parseInt(img.style.left) + 10 + "px";
-            }
-
-             function left() {
-                    let img = document.getElementById("catKey");
-                    img.style.left = parseInt(img.style.left) + 10 + "px";
-                }
-
-
-
-
-
-    
+        ầ;
+      });
     </script>
   </body>
 </html>
+
+\
